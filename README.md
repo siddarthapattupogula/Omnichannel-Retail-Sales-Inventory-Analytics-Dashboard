@@ -98,3 +98,167 @@ Peak purchasing hours
 Product names were standardized to maintain consistency.
 
 df["product"] = df["product"].str.lower().str.strip()
+
+week -- 2
+
+Relational Database Design & SQL Data Analysis
+
+Database Setup
+1. Create Database
+
+A dedicated database was created to store retail sales data.
+
+CREATE DATABASE retail_analytics;
+USE retail_analytics;
+
+Purpose:
+
+Organize retail transaction data
+Enable efficient querying and analysis
+Table Design
+2. Create Sales Table
+
+The cleaned dataset was stored in a structured table called sales_data.
+
+CREATE TABLE sales_data (
+    order_id INT,
+    product VARCHAR(50),
+    category VARCHAR(50),
+    quantity INT,
+    price DECIMAL(10,2),
+    revenue DECIMAL(12,2),
+    city VARCHAR(50),
+    order_date DATETIME,
+    year INT,
+    month INT,
+
+    Data Verification
+
+After importing the cleaned dataset, the table was verified using:
+
+SELECT * FROM sales_data;
+
+Purpose:
+
+Confirm successful data import
+Validate dataset structure
+SQL Business Analysis
+
+Several SQL queries were written to extract important business metrics.
+
+1. Total Revenue
+SELECT SUM(revenue) AS total_revenue
+FROM sales_data;
+
+Purpose:
+
+Calculate overall business revenue
+Measure total sales performance
+2. Total Orders
+SELECT COUNT(order_id) AS total_orders
+FROM sales_data;
+
+Purpose:
+
+Determine the number of transactions
+3. Average Revenue per Order
+SELECT AVG(revenue) AS avg_revenue_per_order
+FROM sales_data;
+
+Purpose:
+
+Identify average order value
+4. Best-Selling Products
+SELECT product, SUM(quantity) AS total_quantity_sold
+FROM sales_data
+GROUP BY product
+ORDER BY total_quantity_sold DESC;
+
+Purpose:
+
+Identify most popular products
+Help businesses prioritize inventory
+5. Revenue by Product Category
+SELECT category, SUM(revenue) AS category_revenue
+FROM sales_data
+GROUP BY category
+ORDER BY category_revenue DESC;
+
+Purpose:
+
+Determine top-performing product categories
+6. Sales by City
+SELECT city, SUM(revenue) AS city_revenue
+FROM sales_data
+GROUP BY city
+ORDER BY city_revenue DESC;
+
+Purpose:
+
+Compare sales performance across different cities
+7. Monthly Sales Trend
+SELECT month, SUM(revenue) AS monthly_sales
+FROM sales_data
+GROUP BY month
+ORDER BY month;
+
+Purpose:
+
+Identify seasonal sales patterns
+8. Yearly Sales Performance
+SELECT year, SUM(revenue) AS yearly_sales
+FROM sales_data
+GROUP BY year
+ORDER BY year;
+
+Purpose:
+
+Track year-to-year business growth
+9. Peak Sales Hours
+SELECT hour, SUM(revenue) AS hourly_sales
+FROM sales_data
+GROUP BY hour
+ORDER BY hourly_sales DESC;
+
+Purpose:
+
+Identify highest purchasing hours
+Optimize store staffing and marketing campaigns
+10. Top Revenue Generating Products
+SELECT product, SUM(revenue) AS product_revenue
+FROM sales_data
+GROUP BY product
+ORDER BY product_revenue DESC
+LIMIT 5;
+
+Purpose:
+
+Identify highest revenue generating products
+11. Average Order Value by City
+SELECT city, AVG(revenue) AS avg_order_value
+FROM sales_data
+GROUP BY city
+ORDER BY avg_order_value DESC;
+
+Purpose:
+
+Analyze customer spending patterns across cities
+12. Weekday Sales Performance
+SELECT DAYNAME(order_date) AS weekday, SUM(revenue) AS total_sales
+FROM sales_data
+GROUP BY weekday
+ORDER BY total_sales DESC;
+
+Purpose:
+
+Identify best performing weekdays
+13. Highest Revenue Day
+SELECT order_date, SUM(revenue) AS daily_sales
+FROM sales_data
+GROUP BY order_date
+ORDER BY daily_sales DESC
+LIMIT 1;
+
+Purpose:
+
+Identify the single highest revenue day
