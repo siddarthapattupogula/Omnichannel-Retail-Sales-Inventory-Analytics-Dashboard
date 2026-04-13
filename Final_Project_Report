@@ -76,8 +76,10 @@ The dashboard provides a complete view of retail sales performance, including tr
 This project demonstrates how data analytics can transform raw retail data into actionable insights. By integrating data cleaning, SQL analysis, and interactive dashboards, the solution helps businesses make data-driven decisions and improve sales and inventory management.
 
 12. Dashboard Screenshots
+<img width="1106" height="605" alt="Product Sales Performance Dashboard" src="https://github.com/user-attachments/assets/51b3a479-adeb-410d-bfe7-82b7aeb0eeb4" />
+<img width="1046" height="579" alt="Total_revenue based on the day   month" src="https://github.com/user-attachments/assets/865eb910-d209-44e4-a16f-53754ecbe019" />
 
-(Add your images after uploading)
+<img width="1024" height="545" alt="Total_revenue based on the day" src="https://github.com/user-attachments/assets/771b46e5-52e3-435e-a51c-d87071affc4e" />
 
 
 
@@ -89,8 +91,9 @@ This project demonstrates how data analytics can transform raw retail data into 
 🔥Integrate real-time data
 🔥Perform customer segmentation
 🔥Improve dashboard with advanced visuals
-14. Author
 
+
+14. Author
 Siddarth Pattupogula
 B.Tech – Electronics and Communication Engineering
 Aspiring Data Analyst
