@@ -10,6 +10,7 @@ Retail businesses operating across multiple locations often face challenges in c
 This project addresses these challenges by developing a centralized analytics dashboard that transforms raw transaction data into meaningful business insights.
 
 Project Objectives
+
 1.Analyze retail sales data to identify important revenue trends
 2.Calculate key performance indicators such as Total Revenue and Average Revenue per Order
 3.Identify best-selling products and product categories
@@ -25,18 +26,19 @@ Technology Stack
 5.GitHub – Version Control and Project Documentation
 
 Project Workflow
-Week 1 – Data Cleaning and Preparation
+
+Week 1   –   Data Cleaning and Preparation
 1.Imported raw retail dataset into Python and Excel
 2.Removed duplicate records and handled missing values
 3.Standardized date and time formats
 4.Verified data types and prepared clean dataset for analysis
 
-Week 2 – SQL Database and Data Analysis
+Week 2   –   SQL Database and Data Analysis
 1.Imported cleaned dataset into SQL database
 2.Performed SQL queries using GROUP BY, ORDER BY, SUM, and AVG
 3.Calculated business metrics including total revenue, best-selling products, and sales distribution by city
 
-Week 3 – Dashboard Development
+Week 3   –  Dashboard Development
 1.Connected dataset to Power BI
 2.Created interactive visualizations including sales trends, product performance, and geographic analysis
 3.Implemented slicers and filters for dynamic data exploration
